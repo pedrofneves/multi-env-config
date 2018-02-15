@@ -17,7 +17,7 @@ module.exports = function(_environmentName, _configDirectory){
 	
 	var environment = process.env[environmentName];
 	
-	var config = require(path.join(__dirname, configDirectory, environment + '.js'));
+	var config = require(path.join(process.cwd(), configDirectory, environment + '.js'));
 	
 	return config;
 }
