@@ -2,6 +2,8 @@ let environmentName = 'NODE_ENV';
 let configDirectory = './src/Config/';
 
 module.exports = function(_environmentName, _configDirectory){
+
+	const path = require('path');
 	
 	if(_environmentName != undefined){
 		environmentName = _environmentName;
@@ -15,7 +17,7 @@ module.exports = function(_environmentName, _configDirectory){
 	
 	var environment = process.env[environmentName];
 	
-	var config = require(configDirectory + environment + '.js');
+	var config = require(path.join(__dirname, configDirectory, environment + '.js'));
 	
 	return config;
 }
