@@ -4,8 +4,9 @@ Multiple environment configuration file.
 
 ## Install
 
-> npm install multi-env-config --save
-
+~~~ Coffee-script
+npm install multi-env-config --save
+~~~
 
 # Init
 
@@ -15,13 +16,13 @@ First you need to initialize using:
 const config = require('multi-env-config').init();
 ~~~
 
-The module expects configuration files in "./src/Config" directory of the base path of your project.
+The module expects configuration files in "./src/Config" directory of the project's base path.
 
-The configuration files name must be the value assigned to "NODE_ENV" environment vairable plus ".js".
+The configuration file name must be the value assigned to "NODE_ENV" environment variable plus ".js".
 
-Alternatively, you can initialize the module specifying your environment variable - in case uou have many node instances in the same machine - and the directory of the configuration files.
+Alternatively, you can initialize the module specifying your environment variable - in case you have many node instances in the same machine - and the directory of the configuration files.
 
-For example:
+For example, the initialization:
 
 ~~~ Coffee-script
 const config = require('multi-env-config').init('MY_PROJECT_NODE_ENV', './src/configuration');
@@ -32,7 +33,7 @@ If your MY_PROJECT_NODE_ENV environment variable has the value "development" the
 
 # Usage
 
-When you need to access some property of you configuration file use:
+When you need to access some property of you configuration file just use:
 
 ~~~ Coffee-script
 const config = require('multi-env-config');
