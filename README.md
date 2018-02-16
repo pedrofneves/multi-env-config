@@ -34,13 +34,15 @@ When you need to access some property of you configuration file use:
 
 For example, if your "development.js" file has the following data:
 
->module.exports = {
->	database: {
-> 		server: '192.168.0.10',
->		user: 'root',
->		password: '123456'
->	}
->}
+~~~ Coffee-script
+module.exports = {
+	database: {
+ 		server: '192.168.0.10',
+		user: 'root',
+		password: '123456'
+	}
+}
+~~~
 
 you can access the data as following:
 
