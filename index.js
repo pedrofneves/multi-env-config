@@ -8,16 +8,13 @@ module.exports = {
 		if(_environmentName != undefined){
 			environmentName = _environmentName;
 		}
-		console.log('Config environment: ' +  process.env[environmentName]);
+		//console.log('Config environment: ' +  process.env[environmentName]);
 		
 		if(_configDirectory != undefined){
 			configDirectory = _configDirectory;
 		}
-		console.log('Config configDirectory: ' + configDirectory);
-			
-		console.log('Config environment: ' +  process.env[environmentName]);
-		console.log('Config configDirectory: ' + configDirectory);
-		
+		//console.log('Config configDirectory: ' + configDirectory);
+					
 		const path = require('path');
 			
 		var environment = process.env[environmentName];
@@ -26,7 +23,7 @@ module.exports = {
 		
 		for (var property in config) {
 			this[property] = config[property];
-			console.log(this[property]);
+			//console.log(this[property]);
 		}
 		
 		return this;
