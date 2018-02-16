@@ -11,7 +11,9 @@ Multiple environment configuration file.
 
 First you need to initialize using:
 
-> const config = require('multi-env-config').init();
+~~~ Coffee-script
+const config = require('multi-env-config').init();
+~~~
 
 The module expects configuration files in "./src/Config" directory of the base path of your project.
 
@@ -21,7 +23,9 @@ Alternatively, you can initialize the module specifying your environment variabl
 
 For example:
 
-> const config = require('multi-env-config').init('MY_PROJECT_NODE_ENV', './src/configuration');
+~~~ Coffee-script
+const config = require('multi-env-config').init('MY_PROJECT_NODE_ENV', './src/configuration');
+~~~
 
 If your MY_PROJECT_NODE_ENV environment variable has the value "development" the module will look for a "development.js" file in the "./src/configuration" directory.
 
@@ -30,7 +34,9 @@ If your MY_PROJECT_NODE_ENV environment variable has the value "development" the
 
 When you need to access some property of you configuration file use:
 
-> const config = require('multi-env-config');
+~~~ Coffee-script
+const config = require('multi-env-config');
+~~~
 
 For example, if your "development.js" file has the following data:
 
@@ -46,7 +52,8 @@ module.exports = {
 
 you can access the data as following:
 
-> const config = require('multi-env-config');
-> let server = config.database.server;
-> let user = config.database.user;
-
+~~~ Coffee-script
+const config = require('multi-env-config');
+let server = config.database.server;
+let user = config.database.user;
+~~~
