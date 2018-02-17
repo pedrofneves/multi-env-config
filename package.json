@@ -1,6 +1,6 @@
 {
   "name": "multi-env-config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Multi environment configuration",
   "main": "index.js",
   "scripts": {
